@@ -2,7 +2,9 @@
 
 A full-stack loyalty and referral system backed by **CognoDB** (managed graph database speaking openCypher over Bolt). Built with NestJS, Next.js, and Docker.
 
-**Live Demo:** [https://your-demo-url.vercel.app](https://your-demo-url.vercel.app) *(update after deploy)*
+**Live Demo:** [https://cognodb-loyalty.vercel.app](https://cognodb-loyalty.vercel.app)
+
+
 
 ---
 
@@ -26,7 +28,7 @@ A loyalty/referral platform is fundamentally about **connections**, not rows.
 ## Data Model
 
 ```
-┌─────────────┐      REFERRED       ┌─────────────┐
+┌─────────────┐                     ┌─────────────┐
 │  Customer   │────────────────────▶│  Customer   │
 │  ─────────  │                     │  ─────────  │
 │  id         │                     │  id         │
@@ -193,9 +195,16 @@ LIMIT 1
 
 ## Screenshots
 
-*(Add screenshots of dashboard, referral tree visualization, and customer detail view here)*
+The application uses skeleton placeholders while read-only graph queries are loading, and resolves into populated tables, analytics panels, or store cards on success. The Customers page provides a clear no-results state when a search produces no matches.
 
----
+| Area | Demonstrated behavior | Evidence |
+|---|---|---|
+| Customers loading | Skeleton rows shown before the customer query settles. | ![Customers loading](screenshots/customers-loading.jpeg) |
+| Customers success | Customer identity, tier, points, and joined date render in a table. | ![Customers populated](screenshots/customers-populated.jpeg) |
+| Customers empty | A nonexistent search displays "No customers found" and guidance to adjust filters. | ![Customers empty](screenshots/customers-empty.jpeg) |
+| Referrals success | Longest-chain analytics, ROI leaderboard, and VIP reach panel render from graph queries. | ![Referrals populated](screenshots/referrals-populated.jpeg) |
+| Stores success | Store cards show address, order count, and revenue. | ![Stores populated](screenshots/stores-populated.jpeg) |
+| API failure | A controlled browser-side network failure transitions the Dashboard to a red error panel with a Retry button. | ![API failure](screenshots/dashboard-api-error.jpeg) |
 
 ## Tech Stack
 
