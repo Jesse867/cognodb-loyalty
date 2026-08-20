@@ -206,6 +206,12 @@ The application uses skeleton placeholders while read-only graph queries are loa
 | Stores success | Store cards show address, order count, and revenue. | ![Stores populated](screenshots/stores-populated.jpeg) |
 | API failure | A controlled browser-side network failure transitions the Dashboard to a red error panel with a Retry button. | ![API failure](screenshots/dashboard-api-error.jpeg) |
 
+## Demo
+
+- **Live application:** [LoyaltyGraph](https://cognodb-loyalty.vercel.app)
+- **Short screen recording:** [Watch the 60-second demo](https://files.manuscdn.com/user_upload_by_module/session_file/310519663706587560/vZnCIIFWOwnievKI.mp4)
+
+
 ## Tech Stack
 
 | Layer | Technology |
